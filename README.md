@@ -33,6 +33,11 @@ and for those, you're able to customize them with:
   - Small (1px)
   - Thick (4px)
 
+# TO-DO
+- Styling system,
+- Controls,
+- OpenGL support.
+
 # Contribution Guidelines
 We require that, before making pull requests to Vandal, you:
 - Adapt your code to the given clang-format settings,
