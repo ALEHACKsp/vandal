@@ -10,6 +10,23 @@ The toolchain used by the Vandal creator, where code is tested and reviewed is a
 - MSVC Compiler (x86, Language Standard: std:++latest / std::c++17)
 - Visual Studio 2019 IDE
 
+# Implementation
+To implement Vandal to your software, you must first:
+- Link DX9 static libraries to your software (regardless of solutioning system),
+- Provide an actual pointer to our D3D9 device (check: Vandal::Handling::Initialize),
+- Call a constructor to whatever you may need.
+
+
+In the future:
+- Before calling said constructors, initialize styles [cannot be done within render setup as one may want specific styles on specific elements],
+- etc...
+
+# Features
+Vandal is currently very barebones, and in extremely early development. There is currently no control whatsoever, but constructors for:
+- Forms
+- Widgets
+- UI
+
 # Contribution Guidelines
 We require that, before making pull requests to Vandal, you:
 - Adapt your code to the given clang-format settings,
