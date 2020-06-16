@@ -15,7 +15,7 @@ We require that, before making pull requests to Vandal, you:
 - Adapt your code to the given clang-format settings,
 - Adapt your code to the advised code style (read below),
 - Test your code to see if there will be any issues in usage,
-- Comment your code to be IntelliSense compatible.
+- Comment your code to be IntelliSense compatible (this is preferably to be done within headers at a function's definition).
 
 [(For the latter you can use Visual Studio extensions such as CppTripleSlash).](https://marketplace.visualstudio.com/items?itemName=tcbhat.CppTripleSlash-xmldoccommentsforc)
 
