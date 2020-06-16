@@ -14,12 +14,12 @@
 // --------------------------------------------------------
 
 // Vandal Framework -- Vandal Framework -- Vandal Framework
-//     ____   ____                  .___      .__		  
-//     \   \ /   /____    ____    __| _/____  |  |		  
-//      \   Y   /\__  \  /    \  / __ |\__  \ |  |		  
-//       \     /  / __ \|   |  \/ /_/ | / __ \|  |__	  
-//        \___/  (____  /___|  /\____ |(____  /____/      
-//                    \/     \/      \/     \/			  
+//     ____   ____                  .___      .__
+//     \   \ /   /____    ____    __| _/____  |  |
+//      \   Y   /\__  \  /    \  / __ |\__  \ |  |
+//       \     /  / __ \|   |  \/ /_/ | / __ \|  |__
+//        \___/  (____  /___|  /\____ |(____  /____/
+//                    \/     \/      \/     \/
 // Vandal Framework -- Vandal Framework -- Vandal Framework
 
 namespace Vandal {
@@ -58,6 +58,7 @@ namespace Vandal {
   // --------------------------------------------------------
   class Frame {
   private:
+    std::string Name{ };
     std::array<int, 4> Bounds{ };
 
   public:
@@ -67,7 +68,8 @@ namespace Vandal {
     /// </summary>
     /// <param name="Name">Form Name</param>
     /// <param name="Bounds">Form Bounds</param>
-    Frame( const std::string & Name, const std::array<int, 4> & Bounds ) noexcept;
+    /// <param name="BorderType">Form Border Type</param>
+    Frame( std::string Name, std::array<int, 4> Bounds, const int BorderType ) noexcept;
     // --------------------------------------------------------
 
     // --------------------------------------------------------
@@ -80,6 +82,7 @@ namespace Vandal {
   // --------------------------------------------------------
   class Widget {
   private:
+    std::string Name{ };
     std::array<int, 4> Bounds{ };
 
   public:
@@ -89,14 +92,11 @@ namespace Vandal {
     /// </summary>
     /// <param name="Name">Form Name</param>
     /// <param name="Bounds">Form Bounds</param>
-    Widget( const std::string & Name, const std::array<int, 4> & Bounds ) noexcept;
+    /// <param name="BorderType">Form Border Type</param>
+    Widget( std::string Name, std::array<int, 4> Bounds, const int BorderType ) noexcept;
     // --------------------------------------------------------
 
     // --------------------------------------------------------
-    /// <summary>
-    /// Get Menu Position from passing
-    /// </summary>
-    /// <returns></returns>
     constexpr std::pair<int, int> GetPosition( ) noexcept { return std::make_pair( Bounds[ 0 ], Bounds[ 1 ] ); }
     constexpr std::pair<int, int> GetSize( ) noexcept { return std::make_pair( Bounds[ 2 ], Bounds[ 3 ] ); }
     // --------------------------------------------------------
@@ -106,6 +106,7 @@ namespace Vandal {
   // --------------------------------------------------------
   class UI {
   private:
+    std::string Name{ };
     std::array<int, 4> Bounds{ };
 
   public:
@@ -115,7 +116,8 @@ namespace Vandal {
     /// </summary>
     /// <param name="Name">Form Name (passed to form constructor)</param>
     /// <param name="Bounds">Form Bounds (passed to form constructor)</param>
-    UI( const std::string & Name, const std::array<int, 4> & Bounds ) noexcept;
+    /// <param name="BorderType">Form Border Type</param>
+    UI( std::string Name, std::array<int, 4> Bounds, const int BorderType ) noexcept;
     // --------------------------------------------------------
 
     // --------------------------------------------------------

@@ -11,18 +11,22 @@
 // --------------------------------------------------------
 
 // Vandal Framework -- Vandal Framework -- Vandal Framework
-//     ____   ____                  .___      .__		  
-//     \   \ /   /____    ____    __| _/____  |  |		  
-//      \   Y   /\__  \  /    \  / __ |\__  \ |  |		  
-//       \     /  / __ \|   |  \/ /_/ | / __ \|  |__	  
-//        \___/  (____  /___|  /\____ |(____  /____/      
-//                    \/     \/      \/     \/			  
+//     ____   ____                  .___      .__
+//     \   \ /   /____    ____    __| _/____  |  |
+//      \   Y   /\__  \  /    \  / __ |\__  \ |  |
+//       \     /  / __ \|   |  \/ /_/ | / __ \|  |__
+//        \___/  (____  /___|  /\____ |(____  /____/
+//                    \/     \/      \/     \/
 // Vandal Framework -- Vandal Framework -- Vandal Framework
 
 namespace Vandal {
   namespace Rendering {
     // --------------------------------------------------------
+    // Enum for additive vertex checks
     enum { NOT_ADDITIVE = 0, ADDITIVE = 1 };
+    // --------------------------------------------------------
+    // Enum for form border
+    enum { NONE = 0, SMALL = 1, THICK = 2 };
     // --------------------------------------------------------
 
     class VRender {
@@ -54,6 +58,22 @@ namespace Vandal {
                              const int H,
                              const Utilities::VColor & Color,
                              const bool AdditiveVertex ) noexcept;
+
+      /// <summary>
+      /// Render Rectangle Outline
+      /// </summary>
+      /// <param name="X">X-axis position</param>
+      /// <param name="Y">Y-axis position</param>
+      /// <param name="W">Rectangle Width</param>
+      /// <param name="H">Rectangle Height</param>
+      /// <param name="Color">Rectangle Color</param>
+      /// <param name="AdditiveVertex">Additive values for Vertex calculation</param>
+      static void RectangleOutline( const int X,
+                                    const int Y,
+                                    const int W,
+                                    const int H,
+                                    const Utilities::VColor & Color,
+                                    const bool AdditiveVertex ) noexcept;
       // --------------------------------------------------------
 
       // --------------------------------------------------------

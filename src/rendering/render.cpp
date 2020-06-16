@@ -12,12 +12,12 @@
 // --------------------------------------------------------
 
 // Vandal Framework -- Vandal Framework -- Vandal Framework
-//     ____   ____                  .___      .__		  
-//     \   \ /   /____    ____    __| _/____  |  |		  
-//      \   Y   /\__  \  /    \  / __ |\__  \ |  |		  
-//       \     /  / __ \|   |  \/ /_/ | / __ \|  |__	  
-//        \___/  (____  /___|  /\____ |(____  /____/      
-//                    \/     \/      \/     \/			  
+//     ____   ____                  .___      .__
+//     \   \ /   /____    ____    __| _/____  |  |
+//      \   Y   /\__  \  /    \  / __ |\__  \ |  |
+//       \     /  / __ \|   |  \/ /_/ | / __ \|  |__
+//        \___/  (____  /___|  /\____ |(____  /____/
+//                    \/     \/      \/     \/
 // Vandal Framework -- Vandal Framework -- Vandal Framework
 
 namespace Vandal {
@@ -40,6 +40,18 @@ namespace Vandal {
 
       Device->SetFVF( D3DFVF_XYZRHW | D3DFVF_DIFFUSE );
       Device->DrawPrimitiveUP( D3DPT_TRIANGLESTRIP, 2, Vertices, sizeof( VRender::VVertex ) );
+    }
+
+    void VRender::RectangleOutline( const int X,
+                                    const int Y,
+                                    const int W,
+                                    const int H,
+                                    const Utilities::VColor & Color,
+                                    const bool AdditiveVertex ) noexcept {
+      Rectangle( X, Y, W, 1, Color, AdditiveVertex );
+      Rectangle( X, Y, 1, H, Color, AdditiveVertex );
+      Rectangle( X + W - 1, Y, 1, H, Color, AdditiveVertex );
+      Rectangle( X, Y + H - 1, W, 1, Color, AdditiveVertex );
     }
     // --------------------------------------------------------
 
