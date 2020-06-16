@@ -1,14 +1,12 @@
 #include "vandal.hpp"
 
-#include "../../csgo/valve/interfaces.hpp"
-
 // Vandal Framework -- Vandal Framework -- Vandal Framework
-//     ____   ____                  .___      .__		  |
-//     \   \ /   /____    ____    __| _/____  |  |		  |
-//      \   Y   /\__  \  /    \  / __ |\__  \ |  |		  |
-//       \     /  / __ \|   |  \/ /_/ | / __ \|  |__	  |
-//        \___/  (____  /___|  /\____ |(____  /____/      |
-//                    \/     \/      \/     \/			  |
+//     ____   ____                  .___      .__		  
+//     \   \ /   /____    ____    __| _/____  |  |		 
+//      \   Y   /\__  \  /    \  / __ |\__  \ |  |		  
+//       \     /  / __ \|   |  \/ /_/ | / __ \|  |__	  
+//        \___/  (____  /___|  /\____ |(____  /____/      
+//                    \/     \/      \/     \/			  
 // Vandal Framework -- Vandal Framework -- Vandal Framework
 
 namespace Vandal {
@@ -35,8 +33,9 @@ namespace Vandal {
   IDirect3DDevice9 * Rendering::VRender::Device = nullptr;
 
   void Handling::Initialize( ) noexcept {
+    // This only serves as an example, provided value to initialize is unrelated to Vandal
     if ( !Rendering::Render.Device )
-      Rendering::Render.Device = CS::g_Interfaces.g_pDevice;
+      Rendering::Render.Device = Utils::g_Context.g_pDevice;
 
     Rendering::Render.SetupDeviceStates( );
     Rendering::Render.SetupFonts( );
@@ -48,5 +47,4 @@ namespace Vandal {
     Rendering::Render.ReleaseFonts( );
   }
   // --------------------------------------------------------
-
 } // namespace Vandal
