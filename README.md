@@ -1,4 +1,4 @@
-⚡ Vandal is an in-development, library independent, menu framework written in C++17, currently only coming with direct rendering support for DX9.
+⚡ Vandal is an in-development, library independent, menu framework written in C++17, currently only coming with direct rendering support for DirectX 9.
 
 # Ideals
 - Vandal aims to be an easy to use and implement, performant high level menu framework meant to give users an intuitive and enjoyable experience,
