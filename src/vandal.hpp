@@ -5,7 +5,6 @@
 #include "utils/color.hpp"
 // --------------------------------------------------------
 #include <array>
-#include <cmath>
 #include <math.h>
 // --------------------------------------------------------
 #include <memory>
