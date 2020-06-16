@@ -23,9 +23,15 @@ In the future:
 
 # Features
 Vandal is currently very barebones, and in extremely early development. There is currently no control whatsoever, but constructors for:
-- Forms
-- Widgets
-- UI
+- Forms,
+- Widgets,
+- UI,
+
+and for those, you're able to customize them with:
+- Borders, with 3 thickness modes:
+  - None (0px)
+  - Small (1px)
+  - Thick (4px)
 
 # Contribution Guidelines
 We require that, before making pull requests to Vandal, you:
