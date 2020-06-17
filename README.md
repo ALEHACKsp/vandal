@@ -34,6 +34,7 @@ and for those, you're able to customize them with:
   - Small (1px),
   - Thick (4px),
     - And each can be given a specific color,
+    
 such as every specific form applet.
 
 # TO-DO
