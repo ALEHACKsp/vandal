@@ -56,6 +56,16 @@ namespace Vandal {
   // --------------------------------------------------------
 
   // --------------------------------------------------------
+  class Styling {
+  public:
+    constexpr Styling( ) noexcept { };
+
+    Utilities::VColor MainFormColor{ };
+    std::array<Utilities::VColor, 4> BorderColor{ };
+  };
+  // --------------------------------------------------------
+
+  // --------------------------------------------------------
   class Frame {
   private:
     std::string Name{ };
@@ -68,8 +78,9 @@ namespace Vandal {
     /// </summary>
     /// <param name="Name">Form Name</param>
     /// <param name="Bounds">Form Bounds</param>
+    /// <param name="Style">Form Style</param>
     /// <param name="BorderType">Form Border Type</param>
-    Frame( std::string Name, std::array<int, 4> Bounds, const int BorderType ) noexcept;
+    Frame( std::string Name, std::array<int, 4> Bounds, const Styling Style, const int BorderType ) noexcept;
     // --------------------------------------------------------
 
     // --------------------------------------------------------
@@ -92,8 +103,9 @@ namespace Vandal {
     /// </summary>
     /// <param name="Name">Form Name</param>
     /// <param name="Bounds">Form Bounds</param>
+    /// <param name="Style">Form Style</param>
     /// <param name="BorderType">Form Border Type</param>
-    Widget( std::string Name, std::array<int, 4> Bounds, const int BorderType ) noexcept;
+    Widget( std::string Name, std::array<int, 4> Bounds, const Styling Style, const int BorderType ) noexcept;
     // --------------------------------------------------------
 
     // --------------------------------------------------------
@@ -114,10 +126,11 @@ namespace Vandal {
     /// <summary>
     /// Initialize UI form
     /// </summary>
-    /// <param name="Name">Form Name (passed to form constructor)</param>
-    /// <param name="Bounds">Form Bounds (passed to form constructor)</param>
+    /// <param name="Name">Form Name</param>
+    /// <param name="Bounds">Form Bounds</param>
+    /// <param name="Style">Form Style</param>
     /// <param name="BorderType">Form Border Type</param>
-    UI( std::string Name, std::array<int, 4> Bounds, const int BorderType ) noexcept;
+    UI( std::string Name, std::array<int, 4> Bounds, const Styling Style, const int BorderType ) noexcept;
     // --------------------------------------------------------
 
     // --------------------------------------------------------
