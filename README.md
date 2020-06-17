@@ -7,8 +7,8 @@
 
 # Direct development toolchain
 The toolchain used by the Vandal creator, where code is tested and reviewed is as follows:
-- MSVC Compiler (x86, Language Standard: std:++latest / std::c++17)
-- Visual Studio 2019 IDE
+- MSVC Compiler (x86, Language Standard: std:++latest / std::c++17), 
+- Visual Studio 2019 IDE. 
 
 # Implementation
 To implement Vandal to your software, you must first:
@@ -53,6 +53,9 @@ We require that, before making pull requests to Vandal, you:
 
 # Code Style
 Vandal is written in Pascal Case to make it easy to find and read functions by their name. Vandal doesn't make use of Hungarian Notation, or stuff alike, it is only meant to be intuitive.
+
+# Licensing
+There is currently no licensing for Vandal. 
 
 # Credits
 @cristeigabriel - Main Vandal developer
