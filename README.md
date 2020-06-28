@@ -38,7 +38,7 @@ and for those, you're able to customize them with:
 such as every specific form applet.
 
 # TO-DO
-- Styling system,
+- Outlining system,
 - Controls,
 - OpenGL support.
 
