@@ -26,7 +26,10 @@ namespace Vandal {
     enum { NOT_ADDITIVE = 0, ADDITIVE = 1 };
     // --------------------------------------------------------
     // Enum for form border
-    enum { NONE = 0, SMALL = 1, THICK = 2 };
+    enum BorderTypes { BNONE = 0, SMALL = 1, THICK = 2 };
+    // --------------------------------------------------------
+    // Enum for form outline
+    enum OutlineTypes { ONONE = 0, INNER = 1, OUTER = 2 };
     // --------------------------------------------------------
 
     class VRender {
