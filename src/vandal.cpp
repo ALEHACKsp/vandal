@@ -2,8 +2,6 @@
 #include "vandal.hpp"
 // --------------------------------------------------------
 
-#include "../../csgo/valve/interfaces.hpp"
-
 // Vandal Framework -- Vandal Framework -- Vandal Framework
 //     ____   ____                  .___      .__
 //     \   \ /   /____    ____    __| _/____  |  |
@@ -115,7 +113,7 @@ namespace Vandal {
     // This only serves as an example, provided value to initialize is unrelated to Vandal
     // First, initialize rendering device
     if ( !Rendering::Render.Device )
-      Rendering::Render.Device = CS::g_Interfaces.g_pDevice;
+      Rendering::Render.Device = ...;
 
     // Then, proceed to call other functions dependant of the device
     Rendering::Render.SetupDeviceStates( );
