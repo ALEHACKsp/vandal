@@ -1,5 +1,8 @@
 ⚡ Vandal is an in-development, library independent, menu framework written in C++17, currently only coming with direct rendering support for DirectX 9.
 
+# Performance
+### CodeFactor
+
 [![CodeFactor](https://www.codefactor.io/repository/github/cristeigabriel/vandal/badge)](https://www.codefactor.io/repository/github/cristeigabriel/vandal)
 
 # Ideals
