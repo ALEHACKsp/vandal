@@ -3,7 +3,7 @@
 # Performance
 ### CodeFactor
 
-[![CodeFactor](https://www.codefactor.io/repository/github/cristeigabriel/vandal/badge)](https://www.codefactor.io/repository/github/cristeigabriel/vandal)
+- [![CodeFactor](https://www.codefactor.io/repository/github/cristeigabriel/vandal/badge)](https://www.codefactor.io/repository/github/cristeigabriel/vandal)
 
 # Ideals
 - Vandal aims to be an easy to use and implement, performant high level menu framework meant to give users an intuitive and enjoyable experience,
