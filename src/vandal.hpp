@@ -88,6 +88,7 @@ namespace Vandal {
     /// <param name="Bounds">Form Bounds</param>
     /// <param name="Style">Form Style</param>
     /// <param name="BorderType">Form Border Type</param>
+    /// <param name="OutlineType">Form Outline Type</param>
     Frame( std::string Name,
            std::array<int, 4> Bounds,
            const Styling Style,
@@ -117,6 +118,7 @@ namespace Vandal {
     /// <param name="Bounds">Form Bounds</param>
     /// <param name="Style">Form Style</param>
     /// <param name="BorderType">Form Border Type</param>
+    /// <param name="OutlineType">Form Outline Type</param>
     Widget( std::string Name,
             std::array<int, 4> Bounds,
             const Styling Style,
@@ -146,6 +148,7 @@ namespace Vandal {
     /// <param name="Bounds">Form Bounds</param>
     /// <param name="Style">Form Style</param>
     /// <param name="BorderType">Form Border Type</param>
+    /// <param name="OutlineType">Form Outline Type</param>
     UI( std::string Name, std::array<int, 4> Bounds, const Styling Style, const int BorderType, const int OutlineType ) noexcept;
     // --------------------------------------------------------
 
