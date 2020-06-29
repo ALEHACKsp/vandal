@@ -6,7 +6,7 @@
 - [![CodeFactor](https://www.codefactor.io/repository/github/cristeigabriel/vandal/badge)](https://www.codefactor.io/repository/github/cristeigabriel/vandal)
 
 ### Codacy
-- Pending webhook...
+- [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4494a01a2eab4c4987dc3bab62a592d9)](https://www.codacy.com/manual/cristeigabriel/vandal?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cristeigabriel/vandal&amp;utm_campaign=Badge_Grade)
 
 # Ideals
 - Vandal aims to be an easy to use and implement, performant high level menu framework meant to give users an intuitive and enjoyable experience,
