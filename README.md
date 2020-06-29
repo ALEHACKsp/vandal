@@ -5,6 +5,9 @@
 
 - [![CodeFactor](https://www.codefactor.io/repository/github/cristeigabriel/vandal/badge)](https://www.codefactor.io/repository/github/cristeigabriel/vandal)
 
+### Codacy
+- Pending...
+
 # Ideals
 - Vandal aims to be an easy to use and implement, performant high level menu framework meant to give users an intuitive and enjoyable experience,
 - Vandal also is written to be independent to any library but the STL and render dependencies, often asking for literals to not lead to future usage,
