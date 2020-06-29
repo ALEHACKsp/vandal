@@ -29,7 +29,7 @@ namespace Vandal {
                              const int H,
                              const Utilities::VColor & VColor,
                              const bool AdditiveVertex ) noexcept {
-      const D3DCOLOR Color = D3DCOLOR_RGBA( VColor.Red, VColor.Blue, VColor.Green, VColor.Alpha );
+      const D3DCOLOR Color = D3DCOLOR_RGBA( VColor.Red, VColor.Green, VColor.Blue, VColor.Alpha );
 
       const VRender::VVertex Vertices[ 4 ] = {
         { X, AdditiveVertex ? Y + H : H, 0.f, 1.f, Color },

@@ -1,5 +1,9 @@
 #pragma once
 
+// --------------------------------------------------------
+#include <inttypes.h>
+// --------------------------------------------------------
+
 // Vandal Framework -- Vandal Framework -- Vandal Framework
 //     ____   ____                  .___      .__
 //     \   \ /   /____    ____    __| _/____  |  |
@@ -13,7 +17,7 @@ namespace Vandal {
   namespace Utilities {
     class VColor {
     public:
-      unsigned char Red, Green, Blue, Alpha;
+      uint8_t Red, Green, Blue, Alpha;
 
     public:
       // --------------------------------------------------------
@@ -21,12 +25,12 @@ namespace Vandal {
       // --------------------------------------------------------
 
       // --------------------------------------------------------
-      constexpr VColor( const unsigned char r, const unsigned char g, const unsigned char b, const unsigned char a ) noexcept
+      constexpr VColor( const uint8_t r, const uint8_t g, const uint8_t b, const uint8_t a ) noexcept
           : Red( r ), Green( g ), Blue( b ), Alpha( a ) {}
       // --------------------------------------------------------
 
       // --------------------------------------------------------
-      constexpr VColor( const unsigned char r, const unsigned char g, const unsigned char b ) noexcept
+      constexpr VColor( const uint8_t r, const uint8_t g, const uint8_t b ) noexcept
           : Red( r ), Green( g ), Blue( b ), Alpha( 255 ) {}
       // --------------------------------------------------------
 

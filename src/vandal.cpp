@@ -2,6 +2,8 @@
 #include "vandal.hpp"
 // --------------------------------------------------------
 
+#include "../../csgo/valve/interfaces.hpp"
+
 // Vandal Framework -- Vandal Framework -- Vandal Framework
 //     ____   ____                  .___      .__
 //     \   \ /   /____    ____    __| _/____  |  |
@@ -13,12 +15,12 @@
 
 namespace Vandal {
   // --------------------------------------------------------
-  Frame::Frame( std::string Name,
+  Frame::Frame( const std::string & Name,
                 std::array<int, 4> Bounds,
-                const Styling Style,
+                const Styling & Style,
                 const int BorderType,
                 const int OutlineType ) noexcept
-      : Name( std::move( Name ) ), Bounds( std::move( Bounds ) ) {
+      : Name( Name ), Bounds( Bounds ) {
     using namespace Rendering;
 
     // Form (Fill)
@@ -84,19 +86,23 @@ namespace Vandal {
   // --------------------------------------------------------
 
   // --------------------------------------------------------
-  Widget::Widget( std::string Name,
+  Widget::Widget( const std::string & Name,
                   std::array<int, 4> Bounds,
-                  Styling Style,
+                  const Styling & Style,
                   const int BorderType,
                   const int OutlineType ) noexcept
-      : Name( std::move( Name ) ), Bounds( std::move( Bounds ) ) {
+      : Name( Name ), Bounds( Bounds ) {
     Frame( Name, Bounds, Style, BorderType, OutlineType );
   }
   // --------------------------------------------------------
 
   // --------------------------------------------------------
-  UI::UI( std::string Name, std::array<int, 4> Bounds, Styling Style, const int BorderType, const int OutlineType ) noexcept
-      : Name( std::move( Name ) ), Bounds( std::move( Bounds ) ) {
+  UI::UI( const std::string & Name,
+          std::array<int, 4> Bounds,
+          const Styling & Style,
+          const int BorderType,
+          const int OutlineType ) noexcept
+      : Name( Name ), Bounds( Bounds ) {
     Frame( Name, Bounds, Style, BorderType, OutlineType );
   }
   // --------------------------------------------------------
@@ -109,7 +115,7 @@ namespace Vandal {
     // This only serves as an example, provided value to initialize is unrelated to Vandal
     // First, initialize rendering device
     if ( !Rendering::Render.Device )
-      Rendering::Render.Device = ...;
+      Rendering::Render.Device = CS::g_Interfaces.g_pDevice;
 
     // Then, proceed to call other functions dependant of the device
     Rendering::Render.SetupDeviceStates( );

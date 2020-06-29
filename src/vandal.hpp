@@ -89,16 +89,16 @@ namespace Vandal {
     /// <param name="Style">Form Style</param>
     /// <param name="BorderType">Form Border Type</param>
     /// <param name="OutlineType">Form Outline Type</param>
-    Frame( std::string Name,
+    Frame( const std::string & Name,
            std::array<int, 4> Bounds,
-           const Styling Style,
+           const Styling & Style,
            const int BorderType,
            const int OutlineType ) noexcept;
     // --------------------------------------------------------
 
     // --------------------------------------------------------
-    constexpr std::pair<int, int> GetPosition( ) noexcept { return std::make_pair( Bounds[ 0 ], Bounds[ 1 ] ); }
-    constexpr std::pair<int, int> GetSize( ) noexcept { return std::make_pair( Bounds[ 2 ], Bounds[ 3 ] ); }
+    constexpr auto GetPosition( ) noexcept { return std::make_pair( Bounds[ 0 ], Bounds[ 1 ] ); }
+    constexpr auto GetSize( ) noexcept { return std::make_pair( Bounds[ 2 ], Bounds[ 3 ] ); }
     // --------------------------------------------------------
   };
   // --------------------------------------------------------
@@ -119,16 +119,16 @@ namespace Vandal {
     /// <param name="Style">Form Style</param>
     /// <param name="BorderType">Form Border Type</param>
     /// <param name="OutlineType">Form Outline Type</param>
-    Widget( std::string Name,
+    Widget( const std::string & Name,
             std::array<int, 4> Bounds,
-            const Styling Style,
+            const Styling & Style,
             const int BorderType,
             const int OutlineType ) noexcept;
     // --------------------------------------------------------
 
     // --------------------------------------------------------
-    constexpr std::pair<int, int> GetPosition( ) noexcept { return std::make_pair( Bounds[ 0 ], Bounds[ 1 ] ); }
-    constexpr std::pair<int, int> GetSize( ) noexcept { return std::make_pair( Bounds[ 2 ], Bounds[ 3 ] ); }
+    constexpr auto GetPosition( ) noexcept { return std::make_pair( Bounds[ 0 ], Bounds[ 1 ] ); }
+    constexpr auto GetSize( ) noexcept { return std::make_pair( Bounds[ 2 ], Bounds[ 3 ] ); }
     // --------------------------------------------------------
   };
   // --------------------------------------------------------
@@ -149,12 +149,13 @@ namespace Vandal {
     /// <param name="Style">Form Style</param>
     /// <param name="BorderType">Form Border Type</param>
     /// <param name="OutlineType">Form Outline Type</param>
-    UI( std::string Name, std::array<int, 4> Bounds, const Styling Style, const int BorderType, const int OutlineType ) noexcept;
+    UI( const std::string & Name, std::array<int, 4> Bounds, const Styling & Style, const int BorderType, const int OutlineType )
+    noexcept;
     // --------------------------------------------------------
 
     // --------------------------------------------------------
-    constexpr std::pair<int, int> GetPosition( ) noexcept { return std::make_pair( Bounds[ 0 ], Bounds[ 1 ] ); }
-    constexpr std::pair<int, int> GetSize( ) noexcept { return std::make_pair( Bounds[ 2 ], Bounds[ 3 ] ); }
+    constexpr auto GetPosition( ) noexcept { return std::make_pair( Bounds[ 0 ], Bounds[ 1 ] ); }
+    constexpr auto GetSize( ) noexcept { return std::make_pair( Bounds[ 2 ], Bounds[ 3 ] ); }
     // --------------------------------------------------------
   };
   // --------------------------------------------------------
