@@ -38,9 +38,10 @@ and for those, you're able to customize them with:
 such as every specific form applet.
 
 # TO-DO
-- Outlining system,
 - Controls,
-- OpenGL support.
+- x11 support [PRIORITY],
+- Vulakn support [PRIORITY],
+- OpenGL support [PRIORITY].
 
 # Contribution Guidelines
 We require that, before making pull requests to Vandal, you:
