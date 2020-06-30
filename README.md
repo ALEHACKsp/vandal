@@ -15,7 +15,7 @@
 
 # Direct development toolchain
 The toolchain used by the Vandal creator, where code is tested and reviewed is as follows:
-- MSVC Compiler (x86, Language Standard: std:++latest / std::c++17), 
+- MSVC Compiler (x86, Language Standard: std:c++latest / std:c++17), 
 - Visual Studio 2019 IDE. 
 
 # Implementation
