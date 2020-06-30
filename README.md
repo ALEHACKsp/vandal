@@ -48,7 +48,7 @@ such as every specific form applet.
 # TO-DO
 - Controls,
 - x11 support [PRIORITY],
-- Vulakn support [PRIORITY],
+- Vulkan support [PRIORITY],
 - OpenGL support [PRIORITY].
 
 # Contribution Guidelines
