@@ -22,12 +22,8 @@ The toolchain used by the Vandal creator, where code is tested and reviewed is a
 To implement Vandal to your software, you must first:
 - Link DX9 static libraries to your software (regardless of solutioning system),
 - Provide an actual pointer to our D3D9 device (check: Vandal::Handling::Initialize),
-- Initialize a styling object and set values as you wish,
+- Initialize a styling object and set values as you wish [or use the default style],
 - Call a constructor to whatever you may need.
-
-
-In the future:
-- ...
 
 # Features
 Vandal is currently very barebones, and in extremely early development. There is currently no control whatsoever, but constructors for:
