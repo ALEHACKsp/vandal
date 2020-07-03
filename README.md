@@ -45,7 +45,8 @@ such as every specific form applet.
 - Controls,
 - x11 support [PRIORITY],
 - Vulkan support [PRIORITY],
-- OpenGL support [PRIORITY].
+- OpenGL support [PRIORITY],
+- TinyXML support.
 
 # Contribution Guidelines
 We require that, before making pull requests to Vandal, you:
