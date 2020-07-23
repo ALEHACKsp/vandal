@@ -31,6 +31,7 @@ namespace Vandal {
 
   // --------------------------------------------------------
   namespace Utilities {
+    class VVertex;
     class VColor;
     class VVec2;
     class VVec3;
@@ -43,9 +44,10 @@ namespace Vandal {
   public:
     // --------------------------------------------------------
     /// <summary>
-    /// Initializes render engine
+    /// Initializes Render Engine
     /// </summary>
-    static void Initialize( ) noexcept;
+    /// <param name="Device">Device Object</param>
+    static void Initialize( IDirect3DDevice9 * Device ) noexcept;
 
     /// <summary>
     /// Disposes render engine
@@ -90,7 +92,7 @@ namespace Vandal {
     /// <param name="BorderType">Form Border Type</param>
     /// <param name="OutlineType">Form Outline Type</param>
     Frame( const std::string & Name,
-           std::array<int, 4> Bounds,
+           const std::array<int, 4> & Bounds,
            const Styling & Style,
            const int BorderType,
            const int OutlineType ) noexcept;
@@ -120,7 +122,7 @@ namespace Vandal {
     /// <param name="BorderType">Form Border Type</param>
     /// <param name="OutlineType">Form Outline Type</param>
     Widget( const std::string & Name,
-            std::array<int, 4> Bounds,
+            const std::array<int, 4> & Bounds,
             const Styling & Style,
             const int BorderType,
             const int OutlineType ) noexcept;
@@ -149,7 +151,11 @@ namespace Vandal {
     /// <param name="Style">Form Style</param>
     /// <param name="BorderType">Form Border Type</param>
     /// <param name="OutlineType">Form Outline Type</param>
-    UI( const std::string & Name, std::array<int, 4> Bounds, const Styling & Style, const int BorderType, const int OutlineType )
+    UI( const std::string & Name,
+        const std::array<int, 4> & Bounds,
+        const Styling & Style,
+        const int BorderType,
+        const int OutlineType )
     noexcept;
     // --------------------------------------------------------
 

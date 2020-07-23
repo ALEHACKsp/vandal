@@ -10,6 +10,14 @@
 #include <array>
 // --------------------------------------------------------
 
+// --------------------------------------------------------
+/// <summary>
+/// This is for the "loss of data" pass for the Vertex constructor, there is no loss of data whatsoever,
+/// but for now we will need this hack.
+/// </summary>
+#pragma warning( disable : 4244 )
+// --------------------------------------------------------
+
 // Vandal Framework -- Vandal Framework -- Vandal Framework
 //     ____   ____                  .___      .__
 //     \   \ /   /____    ____    __| _/____  |  |
@@ -38,9 +46,20 @@ namespace Vandal {
 
     public:
       // --------------------------------------------------------
-      struct VVertex {
+      class VVertex {
+      private:
         float X, Y, Z, RHW;
         D3DCOLOR Color;
+
+      public:
+        VVertex( const float X, const float Y, const int Z, const int RHW, const D3DCOLOR & Color )
+            : X( X ), Y( Y ), Z( Z ), RHW( RHW ), Color( Color ) {}
+        VVertex( const float X, const float Y, const float Z, const float RHW, const D3DCOLOR & Color )
+            : X( X ), Y( Y ), Z( Z ), RHW( RHW ), Color( Color ) {}
+        VVertex( const int X, const int Y, const float Z, const int RHW, const D3DCOLOR & Color )
+            : X( X ), Y( Y ), Z( Z ), RHW( RHW ), Color( Color ) {}
+        VVertex( const int X, const int Y, const float Z, const float RHW, const D3DCOLOR & Color )
+            : X( X ), Y( Y ), Z( Z ), RHW( RHW ), Color( Color ) {}
       };
       // --------------------------------------------------------
 

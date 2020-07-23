@@ -14,7 +14,7 @@
 namespace Vandal {
   // --------------------------------------------------------
   Frame::Frame( const std::string & Name,
-                std::array<int, 4> Bounds,
+                const std::array<int, 4> & Bounds,
                 const Styling & Style,
                 const int BorderType,
                 const int OutlineType ) noexcept
@@ -85,7 +85,7 @@ namespace Vandal {
 
   // --------------------------------------------------------
   Widget::Widget( const std::string & Name,
-                  std::array<int, 4> Bounds,
+                  const std::array<int, 4> &Bounds,
                   const Styling & Style,
                   const int BorderType,
                   const int OutlineType ) noexcept
@@ -96,7 +96,7 @@ namespace Vandal {
 
   // --------------------------------------------------------
   UI::UI( const std::string & Name,
-          std::array<int, 4> Bounds,
+          const std::array<int, 4> & Bounds,
           const Styling & Style,
           const int BorderType,
           const int OutlineType ) noexcept
@@ -109,11 +109,11 @@ namespace Vandal {
   // Device is a static variable, thus we will initialize it first, just in case, to not encounter any issue
   IDirect3DDevice9 * Rendering::VRender::Device = nullptr;
 
-  void Handling::Initialize( ) noexcept {
+  void Handling::Initialize( IDirect3DDevice9 * Device ) noexcept {
     // This only serves as an example, provided value to initialize is unrelated to Vandal
     // First, initialize rendering device
     if ( !Rendering::Render.Device )
-      Rendering::Render.Device = ...;
+      Rendering::Render.Device = Device;
 
     // Then, proceed to call other functions dependant of the device
     Rendering::Render.SetupDeviceStates( );
