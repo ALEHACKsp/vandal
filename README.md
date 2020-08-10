@@ -1,3 +1,5 @@
+# Paused, when I will come back, I will write a batch render engine that'll be portable across engines.
+
 ⚡ Vandal is an in-development menu framework written in C++17, currently only coming with direct rendering support for DirectX 9.
 
 # Performance
